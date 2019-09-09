@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="toyota.js"></script>
+    <link rel="stylesheet" href="toyota.css" />
+    <title>customer information</title>
+    
+  </head>
+  
+  <body>
+    <header>
+       <H1 ><STRong>TOYOTA UGANDA LIMITED</STRong> </H1>
+    </header>
+    <div class="container big " >
+      
+      <div class="container" >
+        <form onsubmit="return validate()" action="authet" method="POST">
+            
+          <div class="row">
+            <div class="col-sm-6">
+              <fieldset class="border p-2">
+                <legend class="w-auto"><strong>Customer Information</strong></legend>
+                <table>
+                  <tr>
+                    <td><label for="customerid">Customer ID:</label></td>
+                    <td><input style="width: 100px" name="customername" id="custId" type="text" autofocus ></td>
+                  </tr>
+                  <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="named" name="named" style="width: 224px" ></td>
+                  </tr>
+                  <tr>
+                    <td><label for="state">State:</label></td>
+                    <td>
+                      <select id="State" name="State" size="0" >            
+                        <option value=""></option>
+                        
+                          <option value="KLA">KLA</option>
+                          <option value="EBB">EBB</option>
+                          <option value="MBR">MBR</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <input type="checkbox" checked name="retail" id="retail">Retail Customer
+                    
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </div>
+            <div class="col-sm-6">
+              <fieldset class="border p-2"style="height: 165px">
+                <table>
+                  <legend class="w-auto"><strong>Shipping</strong></legend>
+                  <tr>
+                    <td>
+                      <input type="radio" checked name="first" id="" value="UPS">UPS
+                    </td>
+                    <td>
+                      <input type="radio" name="first" id="" value="FEDG">Fed Ex Ground
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="radio" name="first" id="" value="US">US Postal Air
+                    </td>
+                    <td>
+                      <input type="radio" name="first" id="" value="FEDA">Fed Ex Air
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row"; style="margin-top: 20px" >
+            <div class="col-lg-6">
+              <fieldset class="border p-2">
+                <legend class="w-auto"><strong>Part Ordered</strong> </legend>
+                <table>
+                  <tr>
+                    <td><label for="customerid">Part Number:</label></td>
+                    <td><input type="number" id="Partno" name="partno" style="width: 224px"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="name">Description:</label></td>
+                    <td><input type="text" id="desc" name="descri" style="width: 224px"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="state">Price per part:</label></td>
+                    <td>
+                      <input style="width: 80px" name="ppp" type="number" id="price">
+                      <label for="Quantity">Quantity:</label>
+                      <input style="width: 70px" type="number" name="qtynamed" id="qty">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <input type="checkbox" name="over" id="oversize">Oversize Cointainer
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </div>
+            <div class="col-lg-6">
+              <fieldset class="border p-2">
+                <legend class="w-auto"><strong>Output</strong></legend>
+                <table>
+                  <tr>
+                    <td><label for="">Cost</label></td>
+                    <td><input type="text" name=""disabled  id="costvalue"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="">Sales Tax</label></td>
+                    <td><input type="text" name="" disabled id="salesvalue"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="">Shipping & Handling</label>
+                    </td>
+                    <td><input type="text" name="" disabled id="Shippingvalue"></td>
+                  </tr>
+                  <tr>
+                    <td><label for="">Total</label></td>
+                    <td><input type="text" disabled name="totaled" id="Totalvalue"></td>
+                  </tr>
+                </table>
+              </fieldset>
+            </div>
+          </div>
+          <div class="row" style="margin: 10px">
+            <div class="col-lg-6">
+              <table>
+                <tr>
+                  <td ><button  class="btn btn-secondary"  type="submit" >Compute</button></td>
+                  <td style="margin-left: 200px" ><button  class="btn btn-secondary" type="reset">New Order</button></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="col-lg-6">
+              <table>
+                <tr>
+                  <td></td>
+                  <td><button style="margin-left: 320px" class="btn btn-danger" onclick="closewindow()" >Exit</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </body>
+</html>

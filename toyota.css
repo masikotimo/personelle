@@ -1,0 +1,18 @@
+.big {
+  background-color: #8DC3C4;
+  border-radius: 15px;
+  width: 70%;
+  margin: 5% auto;
+  transition-property: background;
+  transition-duration: 3s;
+  transition-timing-function: linear;
+  
+}
+body{
+  background-color: #FFEBCD;
+}
+header{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: rotate 10s infinite linear; 
+}
